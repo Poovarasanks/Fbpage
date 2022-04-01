@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <script src="https://code.jquery.com/jquery-1.12.3.min.js" integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ=" crossorigin="anonymous"></script>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <title>FB</title>
+    <script src="E:\bootstrap\jquery-validation-1.19.3\jquery.validate.min.js"></script>
+    
+    <script src="signup.js"></script>
+
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Fruktur&family=Hurricane&family=Oswald:wght@600&display=swap');
+          @import url('https://fonts.googleapis.com/css2?family=Fruktur&family=Hurricane&display=swap');
+          body{
+    background-color: rgb(122, 137, 161);
+}
+          .container{
+        font-family: 'Fruktur', cursive;
+        font-family: 'Hurricane', cursive;
+        font-family: 'Oswald', sans-serif;
+        border-radius: 25px;
+        background-color: rgb(40, 41, 102);
+        margin-top: 20px;
+        padding: 20px;
+        width: 800px;
+    }
+    .radio-inline{
+        text-align: left;
+    }
+    #fname,#lname,#mail,#pwd,#cpwd,#date,.rd,#signup{
+        margin:20px 0px 0px 130px;
+    }
+    .rd{
+        color: white;
+    }
+    #signup{
+        width: 150px;
+        margin-left:340px;
+    }
+    .alh{
+        margin: 40px 0px 0px 310px;
+    }
+    .alh a{
+        color: white;
+    }
+    h1{
+        color: white;
+        font-family: 'Fruktur', cursive;
+font-family: 'Hurricane', cursive;
+font-family: 'Oswald', sans-serif;
+        text-align: center;
+    }
+    .gspan{
+        color:red;
+    }
+    span:not(.gspan){
+        margin-left: 140px;
+        color:red;
+    }
+</style>
+
+
+
+</head>
+<body>
+    <div class="container">
+        <form id="frm">
+<div class="form-group">
+    <div class="row">
+    <h1>SIGN UP</h1>    
+    <div class="form-group col-md-4">
+        <input type="text" id="fname" class="form-control" name="fname" placeholder="First name">
+     </div>
+    <div class="form-group col-md-4">
+        <input type="text" id="lname" class="form-control" name="lname" placeholder="Last name">
+     </div><br>
+     <div class="form-group col-md-8">
+        <span id="fnamemsg">This field is required</span>
+        <input type="email" id="mail" class="form-control" name="mail" placeholder="Enter your mail">
+       <p><span id="formatmsg">Enter correct format</span><span id="emailmsg">This field is required</span></p>  
+    </div>
+    
+     <div class="form-group col-md-8">
+        <input type="password" id="pwd" class="form-control" name="pwd" placeholder="New Password">
+        <span id="pwdmsg">This field is required</span>
+    </div>
+     <div class="form-group col-md-8">
+         <input type="password" id="cpwd" class="form-control" name="cpwd" placeholder="Confirm Password">
+        <p><span id="pwdmismatch">Password mismatch</span><span id="cpwdmsg">This field required</span></p>
+     </div>
+     <div class="form-group col-md-8">
+        <input type="date" id="date" class="form-control" name="date" placeholder="Enter your name">
+        <span id="datemsg">This field is required</span>
+    </div>
+    <div class="row col-md-12 rd">
+        <label class="control-label col-md-2">GENDER : </label>
+        <div class="radio-inline col-md-2">
+            <label><input type="radio" name="optradio" id="male">MALE</label>
+          </div>
+          <div class="radio-inline col-md-2">
+            <label><input type="radio" name="optradio" id="female">FEMALE</label>
+          </div>
+          <div class="radio-inline col-md-2">
+            <label><input type="radio" name="optradio" id="other">OTHER</label>
+          </div><br>
+          <span class="col-md-4"id= "gspan">This field is required</span>
+    </div>
+    <div class="row">
+            <a href="#" type="button" id="signup" class="btn btn-danger">Sign up</a>
+    </div>
+    <div class="col-md-12 alh">
+<a href="fblogin.html" id="alh"> Already have an account?</a>
+    </div>
+    
+</div>
+</form>
+    </div>
+
+
+      
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+</body>
+</html>

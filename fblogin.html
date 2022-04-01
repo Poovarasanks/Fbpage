@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://code.jquery.com/jquery-1.12.3.min.js" integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ=" crossorigin="anonymous"></script>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+
+    <title>FB</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fruktur&family=Hurricane&family=Oswald:wght@600&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Fruktur&family=Hurricane&display=swap');
+    
+        body{
+        background-color: rgb(122, 137, 161);
+        }
+        .fb{
+        font-family: 'Fruktur', cursive;
+        font-family: 'Hurricane', cursive;
+        font-family: 'Oswald', sans-serif;
+
+        text-align: center;
+        color: white;
+        font-size: 25px;
+        }
+        .container{
+            border-radius: 20px;
+            padding: 20px;
+            width: 600px;
+            margin-top: 20px;
+            background-color: rgb(40, 41, 102);
+        }
+        #name,#show_hide_password{
+            margin: 20px;
+            width: 500px;
+        }
+        .log{
+            margin-left: 70px;
+        }
+        #login,#signup{
+            font-family: 'Fruktur', cursive;
+            font-family: 'Hurricane', cursive;
+            font-family: 'Oswald', sans-serif;
+            font-size: 20px;
+            margin-left: 30px;
+            width: 150px;
+        }
+        .btn{
+            margin-top: 20px;
+        }
+    </style>
+
+<script>
+$(document).ready(function() {
+
+    $("#login").click(function(event){
+    
+        var name=$("#name").val();
+        var pwd=$("#pwd").val();
+
+        if(name=="admin" && pwd=="admin")
+        {
+            alert("welcome "+name);
+        }
+        else{
+            event.preventDefault();
+            alert ("Enter correct details")
+        }
+    });
+
+    $("#show_hide_password a").on('click', function(event) {
+        event.preventDefault();
+        if($('#show_hide_password input').attr("type") == "text")
+        {
+            $('#show_hide_password input').attr('type', 'password');
+            $('#show_hide_password i').addClass( "glyphicon glyphicon-eye-close" );
+            $('#show_hide_password i').removeClass( "glyphicon glyphicon-eye-open" );
+        }
+        else if($('#show_hide_password input').attr("type") == "password")
+        {
+            $('#show_hide_password input').attr('type', 'text');
+            $('#show_hide_password i').removeClass( "glyphicon glyphicon-eye-close" );
+            $('#show_hide_password i').addClass( "glyphicon glyphicon-eye-open" );
+        }
+    });
+});
+</script>
+</head>
+<body>
+
+    <div class="container">
+        <form>
+        <div class="fb">FACEBOOK</div>
+        <div class="form-group">
+        <input type="text" id="name" class="form-control" name="mail" placeholder="Enter username"><br>
+   <div class="input-group" id="show_hide_password">
+    <input class="form-control" type="password" id="pwd" placeholder="Enter your password">
+    <span class="input-group-addon">
+      <a href=""><i class="glyphicon glyphicon-eye-close" aria-hidden="true"></i></a>
+    </span>
+  </div>
+
+        <div class="log">
+        <a href="#" type="button" id="login" class="btn btn-info">Login</a>
+        <a href="fbsignup.html" type="button" id="signup" class="btn btn-info">Sign up</a>
+    </div>
+
+</div>
+</form>
+   
+</div>
+  
+  
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+</body>
+</html>
